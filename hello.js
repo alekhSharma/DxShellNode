@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 const sfdx = require('sfdx');
 
 // options - all options to use for the relevant commands
