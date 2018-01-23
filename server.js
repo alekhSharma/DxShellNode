@@ -1,4 +1,4 @@
-//const sfdx = require('sfdx');
+const sfdx = require('sfdx');
 
 // options - all options to use for the relevant commands
 //   (see sfdx config documentation)
@@ -17,7 +17,7 @@ const io = socketIO(server);
 
 io.on('connection', (socket) => {
   console.log('Client connected');
-
- // sfdx.login();
+  console.log(sfdx);
+  sfdx.login();
 
 });
