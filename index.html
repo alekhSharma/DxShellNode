@@ -2,6 +2,10 @@
   <body>
 
   <button onclick="OpenOrg()">Open My Org</button>
+    
+  <button onclick="OpenOrg()">List My Org</button>
+    
+    
     <p id='server-time'></p>
     <script src="/socket.io/socket.io.js"></script>
     <script>
@@ -10,6 +14,11 @@
       function OpenOrg(){
         socket.emit('clicked');
       }
+      
+      function OpenOrg(){
+        socket.emit('OpenOrg');
+      }
+      
     </script>
   </body>
 </html>
