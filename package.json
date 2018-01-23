@@ -6,6 +6,7 @@
   "dependencies": {
     "express": "^4.16.2",
     "sfdx": "*",
+     "sfdx-cli": "^6.1.17",
     "socket.io": "^2.0.4",
      "shelljs": "^0.7.8",
     "yargs": "^10.1.1"
