@@ -34,5 +34,17 @@ io.on('connection', (socket) => {
                   console.log('Source pushed to scratch org');  
                 });
     });
+  
+  
+      socket.on('clicked', function() {
+        var list_of_orgs = sfdx.org.list();
+        list_of_orgs
+          .then(function(data){       
+                  //send a message to ALL connected clients
+                  console.log('inside list');
+                   console.log(data);
+                  io.emit('buttonUpdate', data);
+              });
+          });
 
 });
