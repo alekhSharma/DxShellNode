@@ -15,11 +15,15 @@ const server = express()
 
 const io = socketIO(server);
 
-sfdx.login();
+
 
 io.on('connection', (socket) => {
   console.log('Client connected');
   console.log(sfdx);
   
+  sfdx.login()
+    .then(function({
+      console.log('hi');
+    });
   
 });
