@@ -16,21 +16,23 @@ const server = express()
 const io = socketIO(server);
 
 
-
 io.on('connection', (socket) => {
   console.log('Client connected');
   console.log(sfdx);
   
-   sfdx.auth.webLogin({
-    setdefaultdevhubusername: true,
-    setalias: 'HubOrg'
-})
-.then(function(){
-  //push source
-  return sfdx.source.push();  
-})
-.then(function(){
-  console.log('Source pushed to scratch org');  
-});
-});
+     socket.on('OpenOrg',function spinup() {
+        
+                sfdx.auth.webLogin({
+                setdefaultdevhubusername: true,
+                setalias: 'HubOrg'
+                })
+                .then(function(){
+                  //push source
+                  return sfdx.source.push();  
+                })
+                .then(function(){
+                  console.log('Source pushed to scratch org');  
+                });
+    });
+
 });
