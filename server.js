@@ -1,5 +1,3 @@
-#! /usr/bin/env node
-
 const sfdx = require('sfdx');
 
 // options - all options to use for the relevant commands
@@ -19,11 +17,7 @@ const io = socketIO(server);
 
 io.on('connection', (socket) => {
   console.log('Client connected');
-  socket.on('disconnect', () => console.log('Client disconnected'));
 
-  socket.on('OpenOrg',function(){
+  sfdx.login();
 
-        sfdx.login();
-
-  })
 });
