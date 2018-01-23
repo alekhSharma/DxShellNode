@@ -23,8 +23,8 @@ io.on('connection', (socket) => {
      socket.on('OpenOrg',function() {
         
                 sfdx.auth.webLogin({
-                setdefaultdevhubusername: true,
-                setalias: 'HubOrg'
+               // setdefaultdevhubusername: true,
+               // setalias: 'HubOrg'
                 })
                 .then(function(){
                   //push source
