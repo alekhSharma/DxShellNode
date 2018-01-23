@@ -12,9 +12,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin": {
-    "mycli": "hello.js"
-  },
   "author": "",
   "license": "ISC",
   "repository": {
