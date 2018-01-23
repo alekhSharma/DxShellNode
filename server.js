@@ -14,7 +14,7 @@ const server = express()
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 const io = socketIO(server);
-
+/*
 io.on('connection', (socket) => {
   console.log('Client connected');
   console.log(sfdx);
@@ -26,6 +26,6 @@ io.on('connection', (socket) => {
   sfdx.push(options)
   // Open the newly-created scratch org in a browser window
   sfdx.open(options)
-});
+});*/
 
-});
+//});
