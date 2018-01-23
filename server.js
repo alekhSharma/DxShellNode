@@ -26,9 +26,9 @@ io.on('connection', (socket) => {
                // setdefaultdevhubusername: true,
                // setalias: 'HubOrg'
                 })
-                .then(function(){
-                  //push source
-                  return sfdx.source.push();  
+                .then(function(data){
+                    console.log(data);
+                  return sfdx.auth.webLogin();  
                 })
                 .then(function(){
                   console.log('Source pushed to scratch org');  
@@ -40,10 +40,10 @@ io.on('connection', (socket) => {
         var list_of_orgs = sfdx.org.list();
         list_of_orgs
           .then(function(data){       
-                  //send a message to ALL connected clients
+                 
                   console.log('inside list');
                    console.log(data);
-                  io.emit('buttonUpdate', data);
+               
               });
           });
 
