@@ -19,13 +19,8 @@ io.on('connection', (socket) => {
   console.log('Client connected');
   console.log(sfdx);
   
- socket.on('OpenOrg',function spinup(options) {
-  // Create a new scratch org
-  sfdx.create(options)
-  // Push local code into the newly-created scratch org
-  sfdx.push(options)
-  // Open the newly-created scratch org in a browser window
-  sfdx.open(options)
+ socket.on('OpenOrg',function spinup() {
+  sfdx.login();
 });
 
 });
