@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
   console.log('Client connected');
   console.log(sfdx);
   
-     socket.on('OpenOrg',function spinup() {
+     socket.on('OpenOrg',function() {
         
                 sfdx.auth.webLogin({
                 setdefaultdevhubusername: true,
