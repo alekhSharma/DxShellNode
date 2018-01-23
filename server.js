@@ -1,4 +1,4 @@
-const sfdx = require('sfdx');
+const sfdx = require('sfdx-node');
 
 // options - all options to use for the relevant commands
 //   (see sfdx config documentation)
@@ -21,9 +21,16 @@ io.on('connection', (socket) => {
   console.log('Client connected');
   console.log(sfdx);
   
-  sfdx.login()
-    .then(function({
-      console.log('hi');
-    });
-  
+   sfdx.auth.webLogin({
+    setdefaultdevhubusername: true,
+    setalias: 'HubOrg'
+})
+.then(function(){
+  //push source
+  return sfdx.source.push();  
+})
+.then(function(){
+  console.log('Source pushed to scratch org');  
+});
+});
 });
