@@ -13,7 +13,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "hello.js"
+    "start": "node hello.js"
   },
   "author": "",
   "license": "ISC",
@@ -23,9 +23,6 @@
   },
   "bugs": {
     "url": "https://github.com/alekhSharma/shelljsdx/issues"
-  },
-  "bin": {
-    "shelljsdx": "hello.js"
   },
   "homepage": "https://github.com/alekhSharma/shelljsdx#readme",
   "description": ""
