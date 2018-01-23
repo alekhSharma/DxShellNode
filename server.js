@@ -20,6 +20,7 @@ io.on('connection', (socket) => {
   console.log(sfdx);
   
  socket.on('OpenOrg',function spinup() {
+   console.log(sfdx.org.list());
   sfdx.login();
 });
 
